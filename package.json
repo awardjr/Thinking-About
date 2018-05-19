@@ -1,0 +1,24 @@
+{
+  "name": "thinking-about",
+  "version": "1.0.0",
+  "description": "Thinking about hellshake yano",
+  "main": "thinkingabout.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edibletoaster/Thinking-About.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edibletoaster/Thinking-About/issues"
+  },
+  "homepage": "https://github.com/edibletoaster/Thinking-About#readme",
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "router": "^1.3.2",
+    "twitter": "^1.7.1"
+  }
+}
