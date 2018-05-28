@@ -45,17 +45,23 @@ const server = http.createServer((req, res) => {
                 resolve(true);
               }
             });
+          } else if(!exists) { 
+            //Can't find any existing or new so we'll create the file with default text
+            fs.writeFile(process.env.CACHE_FILENAME, process.env.DEFAULT_TEXT, 'utf8', function (error) {
+              if (error) {
+                console.log(error);
+              } else{
+                resolve(true);
+              }
+            });
+          } else {
+            resolve(true);
           }
-        } else {
-          console.log(errors);
         }
-
       });
-    } else {
+    }  else {
       resolve(true);
     }
-
-
   });
 
   filePromise.then((message) => {
