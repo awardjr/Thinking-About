@@ -67,7 +67,7 @@ const server = http.createServer((req, res) => {
   filePromise.then((message) => {
     fs.readFile(process.env.CACHE_FILENAME, 'utf8', function (error, data) {
       if (!error) {
-        html = `<html><body style='background: #333333; overflow: hidden;'><div style='position: absolute; display: table; width: 100%; height: 100%;'><h1 style='font-size: 64px; text-align: center; vertical-align: middle; display: table-cell; font-family: sans-serif; color:#777777; margin:auto;'>` + data + `</h1></div></body></html>`
+        html = `<html><head> <meta charset="UTF-8"> </head><body style='background: #333333; overflow: hidden;'><div style='position: absolute; display: table; width: 100%; height: 100%;'><h1 style='font-size: 64px; text-align: center; vertical-align: middle; display: table-cell; font-family: sans-serif; color:#777777; margin:auto;'>` + data + `</h1></div></body></html>`
         res.end(html);
       } else {
         console.log(error);
